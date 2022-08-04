@@ -101,8 +101,8 @@ console.log(x, y);
 const averageAge = (ageBelal + ageKabir) / 2;
 console.log(ageBelal, ageKabir, averageAge);
 */
-
-// Coding Challenge 1
+/*
+// Coding Challenge #1
 
 // const massMark = 78;
 // const heightMark = 1.69;
@@ -119,3 +119,25 @@ const bmiJohn = massJohn / heightJohn ** 2;
 const markHigherBMI = bmiMark > bmiJohn;
 
 console.log(bmiMark, bmiJohn, markHigherBMI);
+*/
+
+const firstName = 'Belal';
+const job = 'programmer';
+const birthYear = 1997;
+const year = 2037;
+
+const belal = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(belal);
+
+const belalNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(belalNew);
+
+console.log(`Just a regular string...`);
+
+console.log('Sting with \n\
+multiple \n\
+lines');
+
+console.log(`String
+multiple
+lines`);
