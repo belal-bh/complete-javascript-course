@@ -87,7 +87,6 @@ console.log(ageKabir >= 18);
 
 const isFullAge = ageKabir >= 18;
 console.log(now - 1997 > now - 2018);
-*/
 
 const now = 2037;
 const ageBelal = now - 1997;
@@ -101,3 +100,22 @@ console.log(x, y);
 
 const averageAge = (ageBelal + ageKabir) / 2;
 console.log(ageBelal, ageKabir, averageAge);
+*/
+
+// Coding Challenge 1
+
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.92;
+
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const bmiMark = massMark / heightMark ** 2;
+const bmiJohn = massJohn / heightJohn ** 2;
+const markHigherBMI = bmiMark > bmiJohn;
+
+console.log(bmiMark, bmiJohn, markHigherBMI);
