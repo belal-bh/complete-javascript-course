@@ -59,12 +59,11 @@ job = "teacher";
 
 lasName = "Hossain";
 console.log(lasName);
-*/
 
 // Math operators
 const now = 2037;
 const ageBelal = now - 1997;
-const ageKabir = now - 1918;
+const ageKabir = now - 2018;
 console.log(ageBelal, ageKabir);
 
 console.log(ageBelal * 2, ageBelal / 10, 2 ** 3);
@@ -88,3 +87,17 @@ console.log(ageKabir >= 18);
 
 const isFullAge = ageKabir >= 18;
 console.log(now - 1997 > now - 2018);
+*/
+
+const now = 2037;
+const ageBelal = now - 1997;
+const ageKabir = now - 2018;
+
+console.log( now - 1991 > now - 2018);
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge = (ageBelal + ageKabir) / 2;
+console.log(ageBelal, ageKabir, averageAge);
