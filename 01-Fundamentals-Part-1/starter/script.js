@@ -46,7 +46,6 @@ console.log(typeof year);
 
 // bug can occure
 console.log(typeof null);
-*/
 
 let age = 30;
 age = 31;
@@ -60,3 +59,32 @@ job = "teacher";
 
 lasName = "Hossain";
 console.log(lasName);
+*/
+
+// Math operators
+const now = 2037;
+const ageBelal = now - 1997;
+const ageKabir = now - 1918;
+console.log(ageBelal, ageKabir);
+
+console.log(ageBelal * 2, ageBelal / 10, 2 ** 3);
+
+const firstName = "Belal";
+const lastName = "Hossain";
+console.log(firstName + ' ' +  lastName);
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; 100;
+x++;
+x--;
+x--;
+console.log(x);
+
+// Comparision operators
+console.log(ageBelal > ageKabir);
+console.log(ageKabir >= 18);
+
+const isFullAge = ageKabir >= 18;
+console.log(now - 1997 > now - 2018);
