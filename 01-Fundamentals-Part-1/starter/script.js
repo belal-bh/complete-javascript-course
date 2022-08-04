@@ -121,6 +121,7 @@ const markHigherBMI = bmiMark > bmiJohn;
 console.log(bmiMark, bmiJohn, markHigherBMI);
 */
 
+/*
 const firstName = 'Belal';
 const job = 'programmer';
 const birthYear = 1997;
@@ -141,3 +142,26 @@ lines');
 console.log(`String
 multiple
 lines`);
+*/
+ 
+const age = 15;
+const eligibleAge = 18;
+
+if(age >= eligibleAge){
+	console.log('Kabir can start driving licence 🚗');
+} else {
+	const yearsLeft = eligibleAge - age;
+	console.log(`Kabir is too young. Wait another ${yearsLeft} years 😄`);
+}
+
+
+const birthYear = 2012;
+
+// let century;
+// if (birthYear <= 2000){
+// 	century = 20;
+// } else {
+// 	century = 21;
+// }
+const century = birthYear <= 2000 ? 20 : 21;
+console.log(century);
