@@ -28,36 +28,33 @@ document.querySelector('.check').addEventListener('click', () => {
     : guessedInputFieldValue;
   console.log(guessedNumber, typeof guessedNumber);
   if (typeof guessedNumber !== 'number') {
-    document.querySelector('.message').textContent = '⚠️ Not a number!';
+    displayMessage('⚠️ Not a number!');
     return;
   }
-
-  if (guessedNumber === secretNumber) {
-    celebrate();
-  } else if (guessedNumber > secretNumber) {
-    document.querySelector('.message').textContent = '⬆️ Too high!';
-    currentScore = penaltyScore(currentScore);
-  } else {
-    document.querySelector('.message').textContent = '⬇️ Too low!';
-    currentScore = penaltyScore(currentScore);
-  }
+  guessedNumber === secretNumber ? celebrate() : penaltyScore();
 });
 
 document.querySelector('.again').addEventListener('click', () => resetState());
 
-const penaltyScore = score => {
-  if (score > 0) score--;
-  document.querySelector('.score').textContent = score;
-  if (score === 0) {
-    document.querySelector('.message').textContent = ':boom: You lost!';
+const displayMessage = message =>
+  (document.querySelector('.message').textContent = message);
+
+const penaltyScore = () => {
+  if (currentScore > 0) currentScore--;
+  document.querySelector('.score').textContent = currentScore;
+  if (currentScore === 0) {
+    displayMessage(':boom: You lost!');
     document.querySelector('.number').textContent = secretNumber;
+  } else {
+    displayMessage(
+      guessedNumber > secretNumber ? '⬆️ Too high!' : '⬇️ Too low!'
+    );
   }
-  return score;
 };
 
 const celebrate = () => {
   document.querySelector('body').style.backgroundColor = '#60b347';
-  document.querySelector('.message').textContent = '🎊 Correct Number!';
+  displayMessage('🎊 Correct Number!');
   document.querySelector('.number').textContent = secretNumber;
   document.querySelector('.number').style.width = '25rem';
   highScore = Math.max(highScore, currentScore);
@@ -72,5 +69,5 @@ const resetState = () => {
   guessedNumber = '';
   document.querySelector('.guess').value = guessedNumber;
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.message').textContent = 'Start guessing...';
+  displayMessage('Start guessing...');
 };
